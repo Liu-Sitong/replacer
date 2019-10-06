@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- 上述3个meta标签*必须*放在最前面，任何其他内容都*必须*跟随其后！ -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!--<link rel="icon" href="../../favicon.ico">-->
+
+    <title>Replacer</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="index.css" rel="stylesheet">
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!--[if lt IE 9]>
+    <script src="https://cdn.bootcss.com/html5shiv/3.7.3/html5shiv.min.js"></script>
+    <script src="https://cdn.bootcss.com/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+    <script src="https://apps.bdimg.com/libs/jquery/1.9.1/jquery.min.js"></script>
+    <script src="md5.js"></script>
+    <script src="deletor.js"></script>
+</head>
+
+<body>
+
+<div class="container">
+    <div class="header clearfix">
+        <h3 class="text-muted">Replacer</h3>
+    </div>
+
+    <!--<input id="replace" placeholder="replace" onkeyup="textchange()">-->
+    <div class="row" style="margin-bottom: 10px">
+        <div class="col-md-6" style="text-align: right">
+            <input class="btn btn-default" type="button" onClick="clearOrigin()" value="清空"/>
+        </div>
+        <div style="text-align: right" class="col-md-6">
+            <input class="btn btn-default" type="button" onClick="translateAdd()"
+                   value="翻译"/>
+            <input class="btn btn-default" type="button" onClick="addToText('after')"
+                   value="加入文字簿"/>
+            <input class="btn btn-default" type="button" onClick="copy('after')" value="复制结果"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-sm-6">
+                <textarea id="origin" rows="10" onmouseout="textchange()" onkeyup="textchange()" class="form-control"
+                          placeholder="请输入您的文本"></textarea>
+        </div>
+        <div class="col-sm-6">
+                <textarea id="after" rows="10" readonly="readonly" class="form-control"
+                          placeholder="在此显示替换结果"></textarea></div>
+    </div>
+
+    <!--<div class="row">-->
+    <!--<div class="col-md-4">-->
+
+    <!--</div>-->
+    <!--<div class="col-md-4">-->
+
+    <!--</div>-->
+    <!--<div class="col-md-4">-->
+
+    <!--</div>-->
+    <!--</div>-->
+    <br/>
+    <div class="row" style="margin-bottom: 10px">
+        <div class="col-md-6" style="text-align: left">
+            <p style="font-size: larger"><b>替换规则</b></p>
+        </div>
+        <div style="text-align: right" class="col-md-6">
+            <input class="btn btn-default" type="button" onClick="addToText('aftertrans')"
+                   value="加入文字簿"/>
+            <input class="btn btn-default" type="button" onClick="copy('aftertrans')" value="复制结果"/>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-md-6">
+            <div id="google"></div>
+            <div class="form-inline" style="margin-top: 10px">
+                <span>替换1：将</span>
+                <input type="text" class="form-control" id="replacefrom" placeholder="空白" autocomplete="off">
+                <span>替换为</span>
+                <input type="text" class="form-control" id="replaceto" placeholder="空白" autocomplete="off">
+            </div>
+            <div class="form-inline" style="margin-top: 10px">
+                <span>替换2：将</span>
+                <input type="text" class="form-control" id="replacefrom2" placeholder="空白" autocomplete="off">
+                <span>替换为</span>
+                <input type="text" class="form-control" id="replaceto2" placeholder="空白" autocomplete="off">
+            </div>
+            <div class="form-inline" style="margin-top: 10px">
+                <span>替换3：将</span>
+                <input type="text" class="form-control" id="replacefrom3" placeholder="空白" autocomplete="off">
+                <span>替换为</span>
+                <input type="text" class="form-control" id="replaceto3" placeholder="空白" autocomplete="off">
+                <button class="btn btn-primary" onclick="textchange()">确定</button>
+            </div>
+
+            <p style="margin: 10px; font-size: smaller; color: #787879;">*注：用“\n”表示换行</p>
+        </div>
+        <div class="col-md-6">
+            <textarea id="aftertrans" rows="7" onmouseout="textchange()" onkeyup="textchange()" class="form-control"
+                      placeholder="在此显示翻译结果"></textarea>
+        </div>
+    </div>
+    <br/>
+
+    <div class="panel panel-primary">
+        <div class="panel-heading">文字簿
+            <span style="margin-left: 20px">
+                <input class="btn btn-default" type="button" onClick="copy('mytext')" value="复制文字簿"/></span>
+        </div>
+        <div class="panel-body">
+             <textarea id="mytext" rows="40" onmouseout="textchange()" onkeyup="textchange()" class="form-control"
+                       placeholder="在此保存您的内容"></textarea>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2018 Liu Sitong, Inc. 翻译服务来自百度翻译</p>
+    </footer>
+</div><!-- /.container -->
+
+<script src="https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js"></script>
+<script src="https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+<script>
+
+</script>
+</body>
+</html>
