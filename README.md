@@ -1,2 +1,8 @@
-# replacer
- a simple web tool that can help you replace specified charators to other charators
+# Replacer
+
+[Click here to use it](<https://liu-sitong.github.io/replacer/>)
+
+A simple web tool that can help you replace specified characters to other characters, and translate the result from English to Chinese.
+
+I developed this website in my junior year because I wanted to organize the content of the course slides into a text file more efficiently.
+
