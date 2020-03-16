@@ -1,6 +1,6 @@
 # Replacer
 
-[Click here to use it](<https://liu-sitong.github.io/replacer/>)
+[Click here to use it](<https://liust97.github.io/replacer/>)
 
 A simple web tool that can help you replace specified characters to other characters, and translate the result from English to Chinese.
 
